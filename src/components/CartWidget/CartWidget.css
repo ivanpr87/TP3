@@ -1,0 +1,9 @@
+
+.textoColor p {
+    color: rgb(187, 8, 8);
+    font-size: 20px
+}
+
+.textoColor img{ 
+    color: red;
+}
