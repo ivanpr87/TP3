@@ -5,7 +5,7 @@ import CartWidget from '../CartWidget/CartWidget';
 
 
 
-const Menu = () => {
+const NavBar = () => {
   return (
     <div className='Menu'>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,5 +42,5 @@ const Menu = () => {
 };
 
 
-export default Menu;
+export default NavBar;
 
