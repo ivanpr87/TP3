@@ -15,7 +15,7 @@ const ItemDetail = ({ list }) => {
         <h1>{list.name}</h1>
         <div className='card-detail'>
             <div className='card-detail-left'>
-                
+            <img src={require(`../../../public/assets/images/${list.img}`)} alt="dato.name" className='img' />
             </div>
             <div className='card-detail-right'>
             <p>{list.description}</p>

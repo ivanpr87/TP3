@@ -15,7 +15,7 @@ const Item = ({dato}) =>{
             <img src={require(`../../../public/assets/images/${dato.img}`)} alt="dato.name" />
             <p>Descripcion = {dato.description}</p>
             <p>precio = {dato.price}</p>
-            <Link to ={`/destalles/${dato.id}`}>
+            <Link to ={`/detalles/${dato.id}`}>
             <button className='button button-detail'>Ver detalles</button>
             </Link>
         </div>
