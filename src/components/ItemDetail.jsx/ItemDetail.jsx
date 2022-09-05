@@ -11,11 +11,11 @@ const ItemDetail = ({ list }) => {
         console.log(`agregastes ${count}`)
     }
     return (
-        <article>
+        <article className='caja'>
         <h1>{list.name}</h1>
         <div className='card-detail'>
             <div className='card-detail-left'>
-                <img src={require(`../../../public/assets/images/${list.img}`)} alt={list.img} className="img" />
+                
             </div>
             <div className='card-detail-right'>
             <p>{list.description}</p>

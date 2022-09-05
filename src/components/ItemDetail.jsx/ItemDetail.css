@@ -1,7 +1,12 @@
-.img {
-
+.caja {
+    background-color: black;
     height: 350px;
     width: 400px;
     
 
+}
+
+.img {
+    height: 350;
+    width: 380px;
 }

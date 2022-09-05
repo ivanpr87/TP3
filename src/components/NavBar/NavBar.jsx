@@ -1,5 +1,6 @@
 import React from 'react';
 import CartWidget from '../CartWidget/CartWidget'; 
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,26 +11,27 @@ const NavBar = () => {
     <div className='Menu'>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarColor03">
           <ul className="navbar-nav me-auto">
+            <Link to='/'>
             <li className="nav-item">
-              <a className="nav-link active" href="#">Home
+              <p className="nav-link active" href="#">Home
                 <span className="visually-hidden">(current)</span>
-              </a>
+              </p>
             </li>
+            </Link>
+          <Link to='/productos'>  <li className="nav-item">
+              <p className="nav-link" href="#">Productos</p>
+            </li></Link>
+            <Link to='/detalles'>
             <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
+              <p className="nav-link" to="/">Destalle</p>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
-            </li>
+            </Link>
+            
           </ul>
           <div className='colorLetra'>
             <CartWidget carrito="carrito" />

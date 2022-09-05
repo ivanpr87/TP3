@@ -1,6 +1,7 @@
 import React from 'react'
 import './Item.css';
-import ItemCounterHooks from "../ItemCounterHooks/ItemCounterHooks";
+import { Link } from 'react-router-dom';
+
 
 
 const Item = ({dato}) =>{
@@ -9,15 +10,14 @@ const Item = ({dato}) =>{
     
     return (
         <>
-        <div className='card-container'>
+        <div className='card row'>
             <h1>{dato.name}</h1>
             <img src={require(`../../../public/assets/images/${dato.img}`)} alt="dato.name" />
-            <p>Descripcion = {dato.text}</p>
+            <p>Descripcion = {dato.description}</p>
             <p>precio = {dato.price}</p>
-            <div> <ItemCounterHooks stock= {dato.stock}  /> 
-                <useCounter />
-            </div>
-            
+            <Link to ={`/destalles/${dato.id}`}>
+            <button className='button button-detail'>Ver detalles</button>
+            </Link>
         </div>
         </>
     )
