@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+/*import React, {useEffect, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from "../ItemList/ItemList";
 import DataProductos from "../../Productos/DataProductos";
@@ -7,8 +7,7 @@ import DataProductos from "../../Productos/DataProductos";
 
 
 export default function ItemListConteiner() {
-  function onAdd(count){
-    console.log(`Agregaste ${count} unidades al carrito`) 
+
   }
     const [item, setItem] = useState([]);
 
@@ -33,4 +32,4 @@ export default function ItemListConteiner() {
       
     </div>
   )
-}
+}*/

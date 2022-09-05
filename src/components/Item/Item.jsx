@@ -5,9 +5,11 @@ import ItemCounterHooks from "../ItemCounterHooks/ItemCounterHooks";
 
 const Item = ({dato}) =>{
     
+    
+    
     return (
         <>
-        <div className='card'>
+        <div className='card-container'>
             <h1>{dato.name}</h1>
             <img src={require(`../../../public/assets/images/${dato.img}`)} alt="dato.name" />
             <p>Descripcion = {dato.text}</p>
@@ -15,7 +17,7 @@ const Item = ({dato}) =>{
             <div> <ItemCounterHooks stock= {dato.stock}  /> 
                 <useCounter />
             </div>
-
+            
         </div>
         </>
     )
