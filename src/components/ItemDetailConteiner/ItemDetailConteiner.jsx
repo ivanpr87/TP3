@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 export default function ItemDetailConteiner() {
     const {id}  = useParams()
-    console.log (id)
+    
     const [item, setItem] = useState([]);
 
     useEffect(() => {

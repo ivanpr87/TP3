@@ -23,12 +23,12 @@ const NavBar = () => {
               </p>
             </li>
             </Link>
-          <Link to='/productos'>  <li className="nav-item">
-              <p className="nav-link" href="#">Productos</p>
+          <Link to='/categoria/fruta'>  <li className="nav-item">
+              <p className="nav-link" href="#">Frutas</p>
             </li></Link>
-            <Link to='/detalles'>
+            <Link to='/categoria/verdura'>
             <li className="nav-item">
-              <p className="nav-link" to="/">Destalle</p>
+              <p className="nav-link" to="/">Verduras</p>
             </li>
             </Link>
             
