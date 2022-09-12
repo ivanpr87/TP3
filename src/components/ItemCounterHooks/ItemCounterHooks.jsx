@@ -2,9 +2,10 @@ import React from 'react'
 import useCounter from '../../hooks/useCounter'
 
 
-const ItemCounterHooks = ({stock, onAdd}) => {
+
+const ItemCounterHooks = ({stock, onClick}) => {
+
     const {add, substract, reset, count} = useCounter(stock)
-    
     
     return (
     <div>
@@ -15,13 +16,15 @@ const ItemCounterHooks = ({stock, onAdd}) => {
                 <button className='btn btn-danger' onClick={substract}> - </button>
                 <button className='btn' onClick={reset}> Reset </button>
                 <button className='btn btn-primary' onClick={add}> + </button>
+                <button className="btn btn-dark" onClick={() => onClick (count) }>Comprar</button>
+
             </div>
             <div>
-                <button className='btn' onClick={() => onAdd(count)}> Confimar</button>
             </div>
 
         </div>
     </div>
+    
     )
 }
 
