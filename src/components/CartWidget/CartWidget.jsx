@@ -1,12 +1,19 @@
 import React from 'react';
 import "./CartWidget"
 import "./CartWidget.css"
+import { useCartContext } from '../../context/CartContext';
 
-const CartWidget = ({carrito}) => {
+
+const CartWidget = () => {
+
+    const {totalProducts} = useCartContext();
+    
     return (
         <div className='textoColor'>
-            <p>Tu {carrito}</p>
+            
             <img src="/assets/images/carrito.svg" alt="" />
+            <li><i className="bi bi-cart2">{totalProducts()}</i></li>
+            
         </div>
     );
 }

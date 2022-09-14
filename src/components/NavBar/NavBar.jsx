@@ -34,7 +34,7 @@ const NavBar = () => {
             
           </ul>
           <div className='colorLetra'>
-            <CartWidget carrito="carrito" />
+          <Link className='Underline' to="/cart"><CartWidget /></Link>
           </div>
         </div>
       </div>

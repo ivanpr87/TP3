@@ -1,9 +1,17 @@
 
 .textoColor p {
     color: rgb(187, 8, 8);
-    font-size: 20px
+    font-size: 25px
 }
 
 .textoColor img{ 
     color: red;
 }
+
+.bi-cart2{
+    color: rgb(192, 175, 175);
+    background-color: rgb(110, 109, 168);
+    font-size: 25px;
+    border-radius: 30%;
+    border: solid 5px;
+  }
