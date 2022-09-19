@@ -17,7 +17,7 @@ export default function ItemDetailConteiner() {
 
 
     useEffect(() => {
-        const getItemData = new Promise((resolve, reject) => {
+        const getItemData = new Promise((resolve) => {
             setTimeout(() => resolve(DataProductos.find(Productos => Productos.id === Number(id))), 2000)
 
         });

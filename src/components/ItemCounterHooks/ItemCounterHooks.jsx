@@ -16,7 +16,7 @@ const ItemCounterHooks = ({stock, onClick}) => {
                 <button className='btn btn-danger' onClick={substract}> - </button>
                 <button className='btn' onClick={reset}> Reset </button>
                 <button className='btn btn-primary' onClick={add}> + </button>
-                <button className="btn btn-dark" onClick={() => onClick (count) }>Comprar</button>
+                <button  className="btn btn-success" onClick={() => onClick (count) }>Comprar</button>
 
             </div>
             <div>

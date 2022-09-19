@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    const clear = () => setCart([]);
+    const limpiar = () => setCart([]);
 
     const isInCart = (id) =>
         cart.find((product) => product.id === id) ? true : false;
@@ -32,14 +32,34 @@ export const CartProvider = ({ children }) => {
     const totalProducts = () =>
         cart.reduce((collector, product) => collector + product.quantity, 0);
 
+    const totalPrice = (cuotas) => {
+        const numero = parseInt(cuotas)
+        if (numero === 1) {
+            return cart.reduce
+            ((prev, act) => prev + act.quantity * act.price, 0)
+        } else if (numero === 3) {
+            return cart.reduce
+            ((prev, act) => prev + act.quantity * act.price * 1.20, 0)
+        } else if (numero === 6) {
+            return cart.reduce
+            ((prev, act) => prev + act.quantity * act.price * 1.40, 0)
+        } else if (numero === 12) {
+            return cart.reduce
+            ((prev, act) => prev + act.quantity * act.price * 1.60, 0)
+        }
+
+    }
+
     return (
         <CartContext.Provider
             value={{
-                clear,
+                limpiar,
                 isInCart,
                 removeItem,
                 addItem,
                 totalProducts,
+                totalPrice,
+                cart,
             }}
         >
             {children}

@@ -39,7 +39,7 @@ const ItemDetail = ({ list }) => {
                 alt="imagen"
             />
             <div className="card-body">
-                <h5 className="card-title">{list.name}</h5>
+                <h5 className="card-title text-center">{list.name}</h5>
                 <p className="card-text">{list.description}</p>
                 <p className="card-text">$ {list.price}</p>
                 <ItemCounterHooks stock={list.stock} initial={0} onClick={onAdd} />
