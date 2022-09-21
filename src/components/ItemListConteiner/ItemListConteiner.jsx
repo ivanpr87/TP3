@@ -2,16 +2,21 @@ import React, {useEffect, useState} from 'react';
 import ItemList from '../ItemList/ItemList'
 //import DataProductos from "../../Productos/DataProductos";
 import { useParams } from 'react-router-dom';
-import { collection, getFirestore, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import db from  '../../firebase/firebase';
+import Spinner from '../Spinner/Spinner';
+
 
 
 
 
 export default function ItemListConteiner() {
   
-    const [item, setItem] = useState([]);
+    const [items, setItems] = useState([]);
 
-    const {categoriaId} = useParams ()
+    const {categoryId } = useParams ()
+    const [load, setLoad] = useState(true) 
+  
 
     /*useEffect (() => {
       const getItemData = new Promise((resolve, reject) => {
@@ -25,42 +30,46 @@ export default function ItemListConteiner() {
           
       
       })*/
-/*
-      const getData = async (categoria) =>{
-        try {
-        const document = collection(db,"productos")
-        const col = await getDocs (document)
-        const result = col.docs.map((doc) => doc ={id:doc.id,...doc,data()})
-        setItem(result)
-        setLoad(false)
-      }catch (error){
-          console.log(error)
-      }
-
-      }
-      useEffect(() => {
-          categoryId?getDatacategory(categoryId):getData()
-      },[categoryId])
-
-      getItemData
-      .then(response => setItem(response))
-    }, [categoria];
-
-  */
-    useEffect(()=>{
+   /* useEffect(()=>{
       const querydb = getFirestore();
-      const queryCollection = collection(querydb, `productos`);
-      if (categoriaId) {
-        const queryFilter = query(queryCollection, where(`category`, "==", categoriaId))
+      const queryCollection = collection(querydb, 'productos');
+      if (categoria) {
+        const queryFilter = query(queryCollection, where('categori', "==", categoria))
         getDocs(queryFilter)
         .then(res=>setItem(res.docs.map(product =>({ id: product.id, ...product.data()}))))
       }else {
         getDocs(queryCollection)
         .then(res=>setItem(res.docs.map(product =>({ id: product.id, ...product.data()}))))
       }
-    },[categoriaId])
+    },[categoria])*/
 
+    const getData = async (categoria) => {
+      try {
+        setLoad(true)
+        const document = categoria?query(collection(db, "productos"), where("category", "==", categoria))
+          : collection(db, "productos")
+        const col = await getDocs(document)
+        const result = col.docs.map((doc) => doc = { id: doc.id, ...doc.data() })
+        setItems(result)
+        setLoad(false)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  
+  
+    useEffect(() => {
+      getData(categoryId)
+    }, [categoryId])
+  
+  
+  
+    return (
+      <>
+        {load ? <Spinner /> : <ItemList item={items} />}
+      </>
+    );
+  };
+  
 
-  return item ? <ItemList item={item} setItem={setItem} />: <h1>Cargando...</h1>
-}
 

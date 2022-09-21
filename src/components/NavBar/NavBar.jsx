@@ -23,10 +23,10 @@ const NavBar = () => {
               </p>
             </li>
             </Link>
-          <Link to='/categoria/fruta'>  <li className="nav-item">
+          <Link to='/category/fruta'>  <li className="nav-item">
               <p className="nav-link" href="#">Frutas</p>
             </li></Link>
-            <Link to='/categoria/verdura'>
+            <Link to='/category/verdura'>
             <li className="nav-item">
               <p className="nav-link" to="/">Verduras</p>
             </li>

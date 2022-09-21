@@ -11,7 +11,7 @@ const CartCards = ({ product }) => {
                 <h3 className="card-header">{product.name}</h3>
 
                 <div className="card-body">
-                    <img src={"../assets/images/" + product.img} style={{ width: '25rem' }} alt="imagen-producto"/>
+                    <img src={product.img} style={{ width: '25rem' }} alt="imagen-producto"/>
                 </div>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">Cantidad {product.quantity}</li>

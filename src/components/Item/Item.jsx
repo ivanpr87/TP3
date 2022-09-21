@@ -12,7 +12,7 @@ const Item = ({dato}) =>{
         <>
         <div className='card row'>
             <h1>{dato.name}</h1>
-            <img src={require(`../../../public/assets/images/${dato.img}`)} alt="dato.name" />
+           <img src={dato.img} alt="dato.name" />
             <p>Descripcion = {dato.description}</p>
             <p>precio = {dato.price}</p>
             <Link to ={`/detalles/${dato.id}`}>

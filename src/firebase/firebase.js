@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 
-import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 
     const firebaseConfig = {
@@ -17,21 +17,6 @@ import { collection, addDoc, getFirestore } from "firebase/firestore";
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-async function cargarBaseDeDatos  () {
-    const promise = await fetch('../Productos/DataProductos.json')
-    const productos = await promise.json()
-    productos.forEach(async (producto) => {
-        await addDoc(collection(db, "productos"), {
-            nombre: producto.name,
-            categoria: producto.categoria,
-            descripcion: producto.description,
-            precio: producto.price,
-            stock: producto.stock,
-            
-        });
-    })
-    
-}
 
-export {db,app, cargarBaseDeDatos}
 
+export default db
