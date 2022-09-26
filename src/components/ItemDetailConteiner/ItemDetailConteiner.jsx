@@ -15,7 +15,7 @@ export default function ItemDetailConteiner() {
 
 
     const { id } = useParams();
-    const [selectedItem, setSelectedItem] = useState()   //State donde grabo el item  segun el id
+    const [selectedItem, setSelectedItem] = useState()  
     const [load, setLoad] = useState(true)
 
 
@@ -29,6 +29,8 @@ export default function ItemDetailConteiner() {
     }, [id]);
 
 */
+
+//tambien lo dejo para que se vea como estaba antes
 const getSelected = async (idItem) => {
     try {
         const document = doc(db, "productos", idItem)

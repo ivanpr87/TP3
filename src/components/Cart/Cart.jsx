@@ -28,6 +28,7 @@ const Cart = () => {
                 <CartCards key={product.id} product={product} />
             ))}
             <CartEndShop totalPrice={totalPrice} />
+            
         </>
     );
 };

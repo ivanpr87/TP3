@@ -24,7 +24,7 @@ const ItemDetail = ({ list }) => {
                 const productoCarrito = { id: list.id, cantidad: count };
                 console.log(productoCarrito);
                 addItem(list, count);
-                let stock = list.stock - count;
+                let stock = list.stock - {count};
                 list.stock = stock;
                 navigate("/cart");
             }

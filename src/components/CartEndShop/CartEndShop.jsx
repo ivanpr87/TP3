@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CartEndShop = ({ totalPrice }) => {
@@ -33,15 +34,20 @@ const CartEndShop = ({ totalPrice }) => {
             <div className="card ">
                 <div
                     className="card-body fw-bold fs-3 text-center"
-                    style={{ width: "12rem" }}
+                    style={{ width: "12rem"}}
                 >
                     ${cuota}
                 </div>
             </div>
+            <Link to='/checkout'>
             <button onClick={comprar} type="button" class="btn btn-success ">
-                COMPRAR
+                <h3>Finalizar Pedido</h3>
             </button>
+            </Link>
         </div>
+    
+
+
 
         
     );

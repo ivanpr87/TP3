@@ -1,6 +1,7 @@
 import React from "react";
 import { useCartContext } from "../../context/CartContext";
 
+
 const CartCards = ({ product }) => {
 
     const { removeItem } = useCartContext();
@@ -20,8 +21,9 @@ const CartCards = ({ product }) => {
                 </ul>
                 <div className="card-body">
                     <button onClick={() => removeItem(product.id)} class="badge bg-danger"> Eliminar Prodcuto</button>
-
+             
                 </div>
+                
 
             </div>
         </div>

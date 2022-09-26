@@ -30,18 +30,8 @@ export default function ItemListConteiner() {
           
       
       })*/
-   /* useEffect(()=>{
-      const querydb = getFirestore();
-      const queryCollection = collection(querydb, 'productos');
-      if (categoria) {
-        const queryFilter = query(queryCollection, where('categori', "==", categoria))
-        getDocs(queryFilter)
-        .then(res=>setItem(res.docs.map(product =>({ id: product.id, ...product.data()}))))
-      }else {
-        getDocs(queryCollection)
-        .then(res=>setItem(res.docs.map(product =>({ id: product.id, ...product.data()}))))
-      }
-    },[categoria])*/
+      //lo dejo asi se ve como estaba antes.
+
 
     const getData = async (categoria) => {
       try {
