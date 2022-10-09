@@ -10,13 +10,13 @@ const Item = ({dato}) =>{
     
     return (
         <>
-        <div className='card row'>
+        <div className='card row center'>
             <h1>{dato.name}</h1>
            <img src={dato.img} alt="dato.name" />
-            <p>Descripcion = {dato.description}</p>
-            <p>precio = {dato.price}</p>
+            <p>Descripcion : {dato.description}</p>
+            <p>precio : {dato.price}</p>
             <Link to ={`/detalles/${dato.id}`}>
-            <button className='button button-detail'>Ver producto</button>
+            <button className="card-body fw-bold fs-3 text-center" style={{width:'20rem'}}>Ver producto</button>
             </Link>
         </div>
         </>

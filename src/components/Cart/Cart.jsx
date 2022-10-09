@@ -14,7 +14,7 @@ const Cart = () => {
             <>
                 
                     <div className="card-body">
-                        <Link to="/" className="Underline"><h5 className="card-title text-center">Ver Productos!</h5></Link>
+                        <Link to="/" className="Underline"><h5 className="card-body fw-bold fs-3 text-center">Ver Productos!</h5></Link>
                     </div>
                 
             </>

@@ -54,7 +54,7 @@ const Checkout = () => {
 
     return (
         <>
-            <h1>Finalizando Compra</h1>
+            <h1>Completa tus datos</h1>
             <hr />
             {!orderId ?
                 (<div><h4>Completar Datos:</h4>
@@ -84,7 +84,7 @@ const Checkout = () => {
                         <br />
                         <input
                             type="submit"
-                            value="Finalizar Compra"
+                            value="Enviar Datos"
                             className="btn btn-success"
                         />
 
